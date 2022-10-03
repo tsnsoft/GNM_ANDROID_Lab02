@@ -70,14 +70,14 @@
             android:id="@+id/textView4"
             android:gravity="right"
             android:text="c="
-            android:visibility="invisible"
+            android:visibility="gone"
             tools:ignore="HardcodedText,RtlHardcoded" />
 
         <EditText
             android:id="@+id/editText_c"
             android:importantForAutofill="no"
             android:inputType="number|text"
-            android:visibility="invisible"
+            android:visibility="gone"
             tools:ignore="LabelFor" />
 
         <!-- Поле ввода числа со знаком для "c" -->

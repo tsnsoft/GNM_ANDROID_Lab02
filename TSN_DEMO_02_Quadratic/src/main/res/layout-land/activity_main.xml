@@ -73,7 +73,7 @@
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:visibility="invisible"
+            android:visibility="gone"
             android:paddingLeft="15sp"
             android:text="c="/>
 
@@ -82,7 +82,7 @@
             android:id="@+id/editText_c"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:visibility="invisible"
+            android:visibility="gone"
             android:inputType="number|text"/>
 
 
