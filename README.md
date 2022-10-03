@@ -1,13 +1,6 @@
-# GNM_ANDROID_lab02
+﻿# GNM_ANDROID_lab02
 
-**Квадратное уравнение с 2-мя разметками :**
+**Решение уравнения**
 
 ![Screenshot](screenshot.png)
-
-**Многооконная программа ():**
-
-![Screenshot](screenshot1.png)
-
-![Screenshot](screenshot2.png)
-
 

@@ -1,5 +1,9 @@
 apply plugin: 'com.android.application'
 
+ext {
+    qwqw = []
+}
+
 android {
     compileSdkVersion 32
     defaultConfig {
