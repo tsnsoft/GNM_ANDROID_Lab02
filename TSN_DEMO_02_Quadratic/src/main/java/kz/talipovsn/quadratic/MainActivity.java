@@ -34,10 +34,13 @@ public class MainActivity extends AppCompatActivity {
             public boolean onKey(View v, int keyCode, KeyEvent event) {
                 try {
                     int x = Integer.parseInt(String.valueOf(editText_x.getText()));
+                    // Проверка на вводимое значение x и скрытие компонента editText_c
                     editText_c.setVisibility(x < 4 ? View.VISIBLE : View.GONE);
                 } catch (Exception ee) {
+                    // Установка видимости компонента editText_c
                     editText_c.setVisibility(View.GONE);
                 }
+                // Установка видимости компонента textView4
                 textView4.setVisibility(editText_c.getVisibility());
                 return false;
             }
@@ -45,19 +48,18 @@ public class MainActivity extends AppCompatActivity {
 
         // Проверка на переворот экрана и восстановление нужных значений в компонентах
         if (savedInstanceState != null) {
-            textView_y.setText(savedInstanceState.getString("y"));
-            editText_c.setVisibility(savedInstanceState.getInt("v"));
-            textView4.setVisibility(savedInstanceState.getInt("v"));
+            textView_y.setText(savedInstanceState.getString("y")); // Восстановление значения y
+            editText_c.setVisibility(savedInstanceState.getInt("v")); // Восстановление видимости компонента editText_c
+            textView4.setVisibility(savedInstanceState.getInt("v")); // Восстановление видимости компонента textView4
         }
 
     }
 
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-
         // Сохранение нужных нам значений компонент при перевороте экрана
-        outState.putString("y", textView_y.getText().toString());
-        outState.putInt("v", editText_c.getVisibility());
+        outState.putString("y", textView_y.getText().toString()); // Сохранение значения y
+        outState.putInt("v", editText_c.getVisibility()); // Сохранение видимости компонента editText_c
     }
 
     // МЕТОД ДЛЯ КНОПКИ РАСЧЕТА
@@ -82,11 +84,11 @@ public class MainActivity extends AppCompatActivity {
         // Расчет значений x и x2
         try {
             if (x < 4) {
-                y = (x + Math.pow(a, 2)) - c / (12  * b);
+                y = (3 * x + Math.pow(a, 2)) - c / (12 * b);
             } else {
-                y = Math.pow(x, 1/5) * (7 * a - b);
+                y = Math.pow(x, 1 / 5) * (7 * a - b);
             }
-            if (Double.isNaN(x) || Double.isInfinite(x)) {
+            if (Double.isNaN(y) || Double.isInfinite(y)) {
                 throw new Exception();
             }
             textView_y.setText(String.format("y = %.3f", y));
